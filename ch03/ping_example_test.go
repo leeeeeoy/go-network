@@ -89,4 +89,24 @@ func ExamplePinger() {
 	}
 	cancel()
 	<-done // ensures the pinger exits after canceling the context
+
+	// Output:
+	// Run 1:
+	// resetting timer (0s)
+	// received "ping" (1s)
+	// Run 2:
+	// resetting timer (200ms)
+	// received "ping" (200ms)
+	// Run 3:
+	// resetting timer (300ms)
+	// received "ping" (300ms)
+	// Run 4:
+	// resetting timer (0s)
+	// received "ping" (300ms)
+	// Run 5:
+	// received "ping" (300ms)
+	// Run 6:
+	// received "ping" (300ms)
+	// Run 7:
+	// received "ping" (300ms)
 }

@@ -20,7 +20,6 @@ func DialTimeout(network, address string, timeout time.Duration) (net.Conn, erro
 		},
 		Timeout: timeout,
 	}
-
 	return d.Dial(network, address)
 }
 
